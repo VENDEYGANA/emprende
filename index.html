@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            border: 5px solid #ed7318;
+        }
+        .popup h2 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .popup p {
+            margin: 10px 0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        .popup .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #25D366;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup .button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ed7318;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-left: 10px;
+        }
+        .next-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.getElementById('section1').classList.add('hidden');
+            document.getElementById('section2').classList.add('hidden');
+            document.getElementById(section).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="overlay">
+        <div class="popup">
+            <div id="section1">
+                <h2>PARA EMPRENDEDORES</h2>
+                <p>
+                    Vende y Gana te ofrece un paquete exclusivo para crear tu propia tienda en línea, ideal para emprendedores y negocios emergentes. Por solo $20 USD de pago único, obtendrás:
+                </p>
+                <ul>
+                    <li>📧 Correos de compra y estado de compra para ti y tus clientes</li>
+                    <li>🛍️ 5 Productos para comenzar tu catálogo</li>
+                    <li>📸 10 Imágenes para mostrar tus productos</li>
+                    <li>📱 Manejo administrativo de pedidos desde tu teléfono</li>
+                    <li>💲 Moneda local o en dólares según tu preferencia</li>
+                    <li>🌐 Subdominio gratuito para tu tienda</li>
+                    <li>🛒 Carrito de compra con respuesta móvil para una experiencia de usuario óptima</li>
+                </ul>
+                <button class="next-button" onclick="showSection('section2')">Siguiente</button>
+            </div>
+            <div id="section2" class="hidden">
+                <ul>
+                    <li>🚀 Ancho de banda ilimitado</li>
+                    <li>🔗 Añade una tienda a cualquier sitio web ya existente</li>
+                    <li>🎯 Píxel de Meta, píxel de Snapchat, etiqueta de Google Ads, etiqueta de Pinterest para potenciar tu marketing</li>
+                    <li>🗓️ Asesoramiento por un mes para guiarte en tu camino al éxito</li>
+                </ul>
+                <p>
+                    Si vendes algo más que recargas de saldo y deseas apoyo para tus ventas de cuentas streaming u otros productos tuyos o de terceros, este es el momento perfecto para hacerlo.
+                </p>
+                <p>
+                    ¡Todo esto por solo $20 USD! Una vez creada tu tienda, no deberás pagar nada más de forma mensual. Pero si deseas algo más especializado, te podemos ayudar con planes que incluyen 100 productos, 2500 productos, compra de dominio propio. Estos planes generan una mensualidad, pero ofrecen muchos más beneficios.
+                </p>
+                <p>
+                    En <b>Vende y Gana</b>, creemos en tu potencial. <b>Si tú creces, crecemos contigo.</b> 🌱✨
+                </p>
+                <a href="https://wa.me/584147397648?text=QUIERO%20MAS%20INFORMACION" class="button">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"> Más Información
+                </a>
+                <a href="https://www.vendeygana.net/user/" class="back-button">VOLVER A VENDE Y GANA</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
